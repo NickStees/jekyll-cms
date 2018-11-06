@@ -1,0 +1,41 @@
+services:
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-cutlery
+    title: Catering
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-bullhorn
+    title: Conference Services
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-plus
+    title: Room Setup
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-music
+    title: Audio/Visuals
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-print
+    title: Printing
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-wifi
+    title: WiFi
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-map-signs
+    title: Floor Planning
+  - body: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod       tempor incididunt
+    icon: fa-car
+    title: Parking

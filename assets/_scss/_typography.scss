@@ -1,0 +1,37 @@
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url(//fonts.googleapis.com/css?family=Volkhov:400italic);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+}
+p {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+code, pre {
+  font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
+  color: green;
+}
+

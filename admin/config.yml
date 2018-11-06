@@ -1,0 +1,101 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+# This line should *not* be indented
+media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+collections:
+  - name: "news" # Used in routes, e.g. /admin/collections/blog
+    label: "News" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: "Author", name: "author", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Global"
+    name: "global"
+    files:
+      - label: "Business Info"
+        name: "info"
+        file: "_data/business.yml"
+        fields:
+          - {label: name, name: name, widget: string}
+          - {label: address_full, name: address_full, widget: string}
+          - {label: address_street, name: address_street, widget: string}
+          - {label: address_city, name: address_city, widget: string}
+          - {label: phone_primay, name: phone_primay, widget: string}
+          - {label: phone_secondary, name: phone_secondary, widget: string}
+          - {label: fax, name: fax, widget: string}
+          - {label: email_primary, name: email_primary, widget: string}
+          - {label: google_maps_api_key, name: google_maps_api_key, widget: string}
+      - label: "Social Media"
+        name: "social"
+        file: "_data/social_media.yml"
+        fields:
+          - label: platform
+            name: platform
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: Link, name: link, widget: string}
+      - label: "Services"
+        name: "services"
+        file: "_data/services.yml"
+        fields:
+          - label: services
+            name: services
+            widget: list
+            fields:
+              - {label: title, name: title, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: body, name: body, widget: string}
+  - label: "Pages"
+    name: "home"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "_data/home.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Intro Title, name: intro-title, widget: string}
+          - {label: Intro Subtitle, name: intro-subtitle, widget: string}
+          - {label: Intro Body, name: intro-body, widget: markdown}
+          - {label: Intro Image, name: intro-img, widget: image}
+          - {label: Feature Title, name: feature-title, widget: string}
+          - {label: Feature Subtitle, name: feature-subtitle, widget: string}
+          - {label: Testimonial Title, name: testimonial-title, widget: string}
+          - {label: Testimonial Subtitle, name: testimonial-subtitle, widget: string}
+          - {label: Hotels, name: hotels, widget: number}
+          - {label: Resturants, name: resturants, widget: number}
+          - {label: Museums, name: museums, widget: number}
+          - {label: Minutes, name: minutes, widget: number}
+          - {label: Services Title, name: services-title, widget: string}
+          - {label: Services Subtitle, name: services-subtitle, widget: string}
+          - label: services
+            name: services
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: body, name: body, widget: string}
+
+      - label: "Documents"
+        name: "documents"
+        file: "_data/documents.yml"
+        fields:
+          - {label: intro, name: intro, widget: markdown}
+      - label: "Chart Data"
+        name: "chart"
+        file: "_data/chartdata.yml"
+        fields:
+          - label: Sales
+            name: sales
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: number}
+              - {label: Value, name: value, widget: number}

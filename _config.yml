@@ -1,0 +1,45 @@
+
+exclude:
+  - "/vendor/"
+  - "/node_modules/"
+  - "/assets/_src_img/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "gulpfile.js"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
+
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+
+# Site settings
+title: Jekyll Starter
+subtitle: "A template to get started on"
+url: "" # the base hostname & protocol for your site
+# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
+baseurl: ""
+cover: "/assets/cover.png"
+logo: "/assets/logo.png"
+
+# Build settings
+markdown: kramdown
+
+# Sass is off loaded to gulp.js 
+# sass:
+#     sass_dir: assets/_scss
+#     style: compressed
+
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
+
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
+
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."

@@ -1,0 +1,98 @@
+---
+layout: page
+title: Contact us!
+permalink: /contact/
+headerTitle: Drop Us A Note
+headerSubCopy: Our friendly staff is waiting to help you.
+headerImage: https://picsum.photos/1600/370
+---
+
+{% include global-header.html %}
+
+
+<!-- contact form start -->
+<section id="contact-form">
+  <div class="container">
+    <div id="contact-box" class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <h2>Contact our Friendly Staff Today</h2>
+          <form action="/thankyou/" netlify name="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Your Email address</label>
+              <input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              Comments:
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <select class="form-control">
+              <option>General</option>
+              <option>Marketing</option>
+              <option>Billing</option>
+              <option>Service</option>
+            </select>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two
+              </label>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" required> Agree to terms
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Send</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <div class="block">
+            <h2>Stop By For A visit</h2>
+            <ul class="address-block">
+              <li>
+                <i class="fa fa-map-marker"></i>{{site.data.business.address_full}}
+              </li>
+              <li>
+                <i class="fa fa-envelope-o"></i>Email: {{site.data.business.email_primary}}
+              </li>
+              <li>
+                <i class="fa fa-phone"></i>Phone: {{site.data.business.phone_primay}}
+              </li>
+            </ul>
+
+            <p>
+              <ul class="social-icons">
+                {% for item in site.data.social_media %}
+                <li>
+                  <a href="{{item.link}}" title="{{item.name}}"><i class="fa {{item.icon}}"></i></a>
+                </li>
+                {% endfor %}
+              </ul>
+            </p>
+
+          </div>
+            <div class="google-map">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key={{site.data.business.google_maps_api_key}}&q={{ site.data.business.address_full | url_encode }}" width="555" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include call-to-action.html %}

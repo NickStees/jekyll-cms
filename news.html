@@ -1,0 +1,26 @@
+---
+layout: page
+title: News
+permalink: /news/
+headerTitle: Get the latest on what we're doing
+headerSubCopy: Catch up with us, anytime and anywhere
+custom_head_owl: true
+---
+
+{% include global-header.html %}
+
+
+<div class="container">
+  <div class="well">
+    {% include next-launch.html %}
+  </div>
+  {% for post in site.posts %}
+  <div class="post-area">
+    <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
+    <p class="post-date">{{ post.date | date_to_long_string }}</p>
+    <p>
+      {{ post.content | strip_html | truncatewords: 50 }}
+    </p>
+  </div>
+  {% endfor %}
+</div>

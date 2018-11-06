@@ -1,0 +1,170 @@
+---
+layout: page
+title: Home
+permalink: /
+custom_head_owl: true
+custom_head_counterup: true
+subtitle: "This is the sites subtitle it should be sum up the whole sites purpose."
+visitorstext: "Whether you are hosting or attending an event here, you'll enjoy discovering the riverfront jewel that is the"
+---
+
+<!-- Slider Start -->
+<section id="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="block">
+          <h1 class="animated fadeInUp">{{ site.data.home.title }}</h1>
+          <p class="animated fadeInUp">{{ site.data.home.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>{{ site.data.home.intro-title }}</h2>
+            <p>{{ site.data.home.intro-subtitle }}</p>
+          </div>
+          {{ site.data.home.intro-body | markdownify }}
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{{ site.data.home.intro-img }}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<section id="feature">
+  <div class="row">
+    <div class="content col-md-6 col-md-offset-6">
+      <h2>{{ site.data.home.feature-title }}</h2>
+      <p>{{ site.data.home.feature-subtitle }}</p>
+      <a href="#" class="btn btn-view-works">Start Planning</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Content Start -->
+
+<section id="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h2>{{ site.data.home.testimonial-title }}</h2>
+        <p>{{ site.data.home.testimonial-subtitle }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="block">
+          <ul class="counter-box clearfix">
+            <li>
+              <div class="block">
+                <i class="fa fa-home"></i>
+                <h4 class="counter">{{ site.data.home.hotels }}</h4>
+                <span>Hotels</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="fa fa-beer"></i>
+                <h4 class="counter">{{ site.data.home.resturants }}</h4>
+                <span>Resturants</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="fa fa-university"></i>
+                <h4 class="counter">{{ site.data.home.museums }}</h4>
+                <span>Museums</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="fa fa-plane"></i>
+                <h4><span class="counter">{{ site.data.home.minutes }}</span> Minutes</h4>
+                <span>Drive from the Airport</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            <div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i> Shoutout to the {{site.data.business.name}} for such a great demo. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                <div class="user">
+                  <img src="img/twitter-user-1.jpg" alt="Pepole">
+                  <p><span>Bob Henson</span> via Twitter</p>
+                </div>
+            </div>
+            <div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i> Static sites are security fortresses! <i class="fa fa-quote-right" aria-hidden="true"></i> </p>
+                <div class="user">
+                  <img src="img/twitter-user-2.jpg" alt="Pepole">
+                  <p><span>Clay Risro</span> via Twitter</p>
+                </div>
+            </div>
+            <div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i> I love not having a CMS to have to update all the time. <i class="fa fa-quote-right" aria-hidden="true"></i> </p>
+                <div class="user">
+                  <img src="img/twitter-user-3.jpg" alt="Pepole">
+                  <p><span>Rose Ray</span> via Twitter</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include call-to-action.html %}
+
+<!-- Service Start -->
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2>{{ site.data.home.services-title }}</h2>
+        <p>{{ site.data.home.services-subtitle }}</p>
+      </div>
+    </div>
+    <div class="row ">
+      {% for item in site.data.services %}
+        <div class="col-sm-6 col-md-3">
+          <div class="service-item">
+            <i class="fa {{item.icon}}"></i>
+            <h4>{{item.title}}</h4>
+            <p>{{item.body}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

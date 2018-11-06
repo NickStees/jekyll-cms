@@ -1,0 +1,12 @@
+name: Jekyll Demo Site
+address_full: 333 S. Franklin Street Tampa, FL 33602
+address_street: 333 S. Franklin Street
+address_city: Tampa
+
+phone_primay: (813) 123-4567
+phone_secondary: (813) 765-4321
+fax: (813) 666-6666
+
+email_primary: info@example.com
+
+google_maps_api_key: AIzaSyDjns25WLcdlxkrOUFfOm_wJ64YQz1Nw90

@@ -1,0 +1,40 @@
+{
+  "top": [{
+      "text": "Home",
+      "path": "/"
+    },
+    {
+      "text": "Directory",
+      "path": "/directory/"
+    },
+    {
+      "text": "Gallery",
+      "path": "/gallery/"
+    },
+    {
+      "text": "News",
+      "path": "/news/"
+    },
+    {
+      "text": "Contact",
+      "path": "/contact/"
+    },
+    {
+      "text": "Data",
+      "path": "/data/"
+    },
+    {
+      "text": "Documents",
+      "path": "/docs/"
+    }
+  ],
+  "left": [{
+      "text": "Home",
+      "path": "/"
+    },
+    {
+      "text": "Directory",
+      "path": "/directory/"
+    }
+  ]
+}

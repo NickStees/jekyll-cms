@@ -1,0 +1,54 @@
+//@include size(xs) { /* Words */ }
+//@include size(sm) { /* Words */ }
+//@include size(mdu) { /* Words */ }
+//@include size(lgu) { /* Words */ }
+//@include size(xlu) { /* Words */ }
+//@
+//@ breakpoints are bootstraps defaults
+// Extra small screen / phone
+// $screen-xs-min:               //480px
+// Small screen / tablet
+// $screen-sm-min:               //768px
+// Medium screen / desktop
+// $screen-md-min:               //992px
+// Large screen / wide desktop
+// $screen-lg-min:               //1200px
+
+@mixin size($media) {
+  // These variables are for styles needed ONLY within these widths
+  @if $media == xs {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+    // These variables are for styles needed in their min-widths and everything above it
+  @else if $media == smu {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $media == mdu {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == lgu {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  @else if $media == xlu {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+
+  @else if $media == xxlu {
+    @media only screen and (min-width: 1600px) { @content; }
+  }
+    // Special media query for only for mobile break point
+  @else if $media == mb {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+
+}

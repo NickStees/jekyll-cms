@@ -1,0 +1,58 @@
+ ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+ a,
+ a:active,
+ a:focus,
+ a:active {
+   text-decoration: none !important;
+ }
+ .section-title {
+   margin-bottom: 70px;
+ }
+ .section-title h2 {
+   text-transform: uppercase;
+   font-size: 28px;
+   font-weight: 600;
+ }
+ .section-title p {
+   font-family: 'Volkhov', serif;
+   font-style: italic;
+   color: #666;
+ }
+
+ .italic {
+   font-style: italic;
+ }
+
+ .bold {
+   font-weight: bold;
+ }
+
+ .center-text {
+   text-align: center;
+ }
+
+.post-area {
+  padding: 40px;
+  width: 100%;
+  min-height: 150px;
+  background-color: white;
+  border-bottom: 1px dotted #ddd;
+}
+
+.post-area a:link, .post-area a:visited {
+  font-size: 30px;
+  color: #333;
+}
+
+.post-area a:hover {
+  color: #0D0017;
+}
+
+
+#documents .container {
+  padding: 2.5em 0;
+}

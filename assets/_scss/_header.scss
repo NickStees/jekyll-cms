@@ -1,0 +1,97 @@
+/*--
+	Header Start
+--*/
+/*--------- Heading------------*/
+
+.heading {
+  padding-bottom: 60px;
+  text-align: center;
+  h2 {
+    color: #000;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 18px;
+    line-height: 40px;
+    color: #292929;
+    font-weight: 300;
+  }
+}
+
+header {
+  background: #fff;
+  padding: 20px 0;
+  .navbar {
+    margin-bottom: 0px;
+    border: 0px;
+  }
+  .navbar-brand {
+    padding-top: 5px;
+  }
+  .navbar-default {
+    background: none;
+    border: 0px;
+    .navbar-nav {
+      padding-top: 10px;
+      li a {
+        color: #333333;
+        padding: 10px 26px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+font header .navbar-default .navbar-nav li a:hover {
+  color: #000;
+}
+
+#rand-city {
+  color: #004585;
+  text-decoration: none;
+  border-bottom: 2px solid #004585;
+}
+
+// generic header used on internal pages
+#global-header {
+  background: url("https://picsum.photos/1600/370?random") no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 107px;
+  position: relative;
+  // background-attachment: fixed;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #928dab, #1f1c2c 70%);
+    opacity: 0.8;
+  }
+  .block {
+    color: #E3E3E4;
+    margin: 0 auto;
+    padding-left: 90px;
+    text-align: center;
+    h1 {
+      font-weight: 100;
+      font-size: 45px;
+      letter-spacing: 6px;
+      padding-bottom: 15px;
+      margin-top: 0;
+      text-transform: capitalize;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      word-spacing: 3px;
+    }
+  }
+}

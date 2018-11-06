@@ -1,0 +1,62 @@
+---
+layout: page
+title: Our Work
+permalink: /gallery/
+headerTitle: Photo Gallery
+headerSubCopy: Automatically generated from images in a folder.
+custom_head_owl: true
+---
+
+{% include global-header.html %}
+
+<!-- Portfolio Start -->
+<section id="portfolio-work">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="image-gallery">
+                  {% for image in site.static_files %}
+                      {% if image.path contains 'img/gallery' %}
+                        <div class="image-gallery-item">
+                          <a href="{{ site.baseurl }}{{ image.path }}">
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                            <div class="overly">
+                              <div class="position-center">
+                                <h2>Click To View</h2>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Logo Section Start -->
+<section id="clients-logo-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>We work with clients such as: </h2>
+        <div class="block">
+          <div id="clients-logo" class="owl-carousel">
+            {% for image in site.static_files %}
+                {% if image.path contains 'img/clients' %}
+                <div class="clients-logo-img">
+                  <img src="{{ site.baseurl }}{{ image.path }}">
+                </div>
+                {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include call-to-action.html %}

@@ -1,0 +1,66 @@
+---
+layout: page
+title: Data
+permalink: /data/
+headerTitle: data
+headerSubCopy: Maintain Charts with Netlify CMS
+---
+
+{% include global-header.html %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+<!-- Portfolio Start -->
+<section id="portfolio-work">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Chart Data</h1>
+            <p>Use the Netlify CMS to maintain yaml files which is the source data for creating this chart.</p>
+
+             <canvas id="canvas"></canvas>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+var chartData = {
+            labels: [
+            {% for item in site.data.chartdata.sales %}
+                "{{item.label}}",
+            {% endfor %}
+                ],
+            datasets: [{
+                label: 'Sales',
+                borderWidth: 1,
+                data: [
+                {% for item in site.data.chartdata.sales %}
+                "{{item.value}}",
+                {% endfor %}
+
+                ]
+            }]
+
+        };
+
+window.onload = function() {
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myBar = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Example'
+            }
+        }
+    });
+
+};
+</script>

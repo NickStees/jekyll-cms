@@ -1,0 +1,42 @@
+---
+layout: page
+title: Directory
+permalink: /directory/
+headerTitle: Employee Directory
+headerSubCopy: Find who you are looking for
+custom_head_datatables: true
+---
+
+{% include global-header.html %}
+
+<div class="container">
+  <div class="row">
+    <h3>Employee Directory</h3>
+    <p>This employee directory is built from a single .csv file that is easy for clients to maintain with minimal Excel skills, and simple for a developer to update.</p>
+    <hr>
+    <table class="table table-striped dataTable">
+      <thead>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+          <td>Gender</td>
+          <td>Department</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in site.data.directory %}
+        <tr>
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td><a href="MailTo:{{ user.email }}">{{ user.email }}</a></td>
+          <td>{{user.gender}}</td>
+          <td>{{user.department | strip_html | truncatewords: 50 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% include call-to-action.html %}

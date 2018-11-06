@@ -1,0 +1,61 @@
+.image-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    .image-gallery-item {
+      width: 32.22%;
+      overflow: hidden;
+      margin: 6px;
+      position: relative;
+      a {
+        display: inline-block;
+        color: #fff;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        h2 {
+          font-size: 22px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        p {
+          font-size: 15px;
+        }
+        span {
+          font-style: italic;
+          font-size: 13px;
+          color: #655E7A;
+        }
+      }
+      .overly {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: .3s all;
+        text-align: center;
+      }
+      .position-center {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0%, 50%);
+        transition: .5s all;
+      }
+      &:hover {
+        .overly {
+          opacity: 1;
+        }
+        .position-center {
+          position: absolute;
+          top: 50%;
+          transform: translate(0%, -50%);
+        }
+      }
+
+    }
+}

@@ -1,0 +1,18 @@
+<!-- footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-manu">
+          <ul>
+            {% for item in site.data.menu.top %}
+              <li><a href="{{ site.baseurl }}{{item.path}}">{{item.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <p>Call us anytime at <strong>{{site.data.business.phone_primay}}</strong><br>
+        Or vist us at <a href="http://maps.google.com/?q={{site.data.business.address_full | url_encode}}">{{site.data.business.address_full}}</a></p>
+      </div>
+    </div>
+  </div>
+</footer>

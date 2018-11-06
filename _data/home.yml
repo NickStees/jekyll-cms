@@ -1,0 +1,19 @@
+title: Jekyll with Netlify CMS
+subtitle: Static speed, with dynamic content
+intro-title: Intro Title
+intro-subtitle: Intro Sub-Title goes here
+intro-body: >-
+  Lorem ipsum dolor sit amet, **consectetur adipisicing elit**. Saepe tenetur
+  deleniti assumenda laudantium quos nulla ipsa officiis hic eos vero odio
+  iusto, aliquid distinctio nemo facilis voluptate officia voluptatum?
+intro-img: /uploads/8649856355_627bcdeadf_h.jpg
+feature-title: Feature Title
+feature-subtitle: Feature Subtitle
+testimonial-title: We are the Best
+testimonial-subtitle: Just let us show you
+hotels: '15'
+resturants: '25'
+museums: '100'
+minutes: '12'
+services-title: Service Title
+services-subtitle: Services Subtitle

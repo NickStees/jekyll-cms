@@ -1,0 +1,19 @@
+platform:
+  - icon: fa-facebook
+    link: 'http://facebook.com/'
+    name: Facebook
+  - icon: fa-twitter
+    link: 'http://twitter.com/'
+    name: Twitter
+  - icon: fa-pinterest
+    link: 'http://pintrest.com/'
+    name: Pinterest
+  - icon: fa-dribbble
+    link: 'http://dribble.com/'
+    name: Dribbble
+  - icon: fa-behance
+    link: 'http://behance.com/'
+    name: Behance
+  - icon: fa-linkedin
+    link: 'http://linkedin.com/'
+    name: LinkedIn

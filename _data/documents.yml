@@ -1,0 +1,4 @@
+intro: >-
+  This page scans the file system and list out files in the **/docs folder**
+  based on either the folder they are in or their file name. Developers can just
+  add a file in the folder and it will show up on this page, no need to edit!
