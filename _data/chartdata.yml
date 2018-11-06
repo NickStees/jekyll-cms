@@ -1,6 +1,6 @@
 sales:
   - label: 2018
-    value: 1548
+    value: '1556'
   - label: 2017
     value: 1489
   - label: 2016
@@ -10,4 +10,4 @@ sales:
   - label: 2014
     value: 1012
   - label: 2013
-    value: 998
+    value: '1085'
