@@ -2,6 +2,8 @@
 
 This Jekyll Demo site is meant to showcase how a typical site can be created with Jekyll. It features a mix of developer friendly features such as galleries built from the file system, along with Client friendly features using Netlify CMS for basic editing that a client can login and update content.
 
+**Live Demo** [https://jekyll-netlifycms.netlify.com/](https://jekyll-netlifycms.netlify.com/)
+
 # Features at a Glance
 
 - **Gulp.js** modern build allows for SASS/SCSS and JS/Babel processing.
