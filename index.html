@@ -4,8 +4,6 @@ title: Home
 permalink: /
 custom_head_owl: true
 custom_head_counterup: true
-subtitle: "This is the sites subtitle it should be sum up the whole sites purpose."
-visitorstext: "Whether you are hosting or attending an event here, you'll enjoy discovering the riverfront jewel that is the"
 ---
 
 <!-- Slider Start -->
@@ -105,25 +103,28 @@ visitorstext: "Whether you are hosting or attending an event here, you'll enjoy 
         <div class="testimonial-carousel">
           <div id="testimonial-slider" class="owl-carousel">
             <div>
-                <p><i class="fa fa-quote-left" aria-hidden="true"></i> Shoutout to the {{site.data.business.name}} for such a great demo. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
-                <div class="user">
-                  <img src="img/twitter-user-1.jpg" alt="Pepole">
-                  <p><span>Bob Henson</span> via Twitter</p>
-                </div>
+              <p><i class="fa fa-quote-left" aria-hidden="true"></i> Shoutout to the {{site.data.business.name}} for
+                such a great demo. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+              <div class="user">
+                <img src="img/twitter-user-1.jpg" alt="Pepole">
+                <p><span>Bob Henson</span> via Twitter</p>
+              </div>
             </div>
             <div>
-                <p><i class="fa fa-quote-left" aria-hidden="true"></i> Static sites are security fortresses! <i class="fa fa-quote-right" aria-hidden="true"></i> </p>
-                <div class="user">
-                  <img src="img/twitter-user-2.jpg" alt="Pepole">
-                  <p><span>Clay Risro</span> via Twitter</p>
-                </div>
+              <p><i class="fa fa-quote-left" aria-hidden="true"></i> Static sites are security fortresses! <i class="fa fa-quote-right"
+                  aria-hidden="true"></i> </p>
+              <div class="user">
+                <img src="img/twitter-user-2.jpg" alt="Pepole">
+                <p><span>Clay Risro</span> via Twitter</p>
+              </div>
             </div>
             <div>
-                <p><i class="fa fa-quote-left" aria-hidden="true"></i> I love not having a CMS to have to update all the time. <i class="fa fa-quote-right" aria-hidden="true"></i> </p>
-                <div class="user">
-                  <img src="img/twitter-user-3.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> via Twitter</p>
-                </div>
+              <p><i class="fa fa-quote-left" aria-hidden="true"></i> I love not having a CMS to have to update all the
+                time. <i class="fa fa-quote-right" aria-hidden="true"></i> </p>
+              <div class="user">
+                <img src="img/twitter-user-3.jpg" alt="Pepole">
+                <p><span>Rose Ray</span> via Twitter</p>
+              </div>
             </div>
           </div>
         </div>
@@ -145,13 +146,13 @@ visitorstext: "Whether you are hosting or attending an event here, you'll enjoy 
     </div>
     <div class="row ">
       {% for item in site.data.services %}
-        <div class="col-sm-6 col-md-3">
-          <div class="service-item">
-            <i class="fa {{item.icon}}"></i>
-            <h4>{{item.title}}</h4>
-            <p>{{item.body}}</p>
-          </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="fa {{item.icon}}"></i>
+          <h4>{{item.title}}</h4>
+          <p>{{item.body}}</p>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>

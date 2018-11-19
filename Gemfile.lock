@@ -64,7 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.12)
-  jekyll (~> 3.2)
+  jekyll
   jekyll-cms!
   rake (~> 10.0)
 
