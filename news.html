@@ -3,7 +3,7 @@ layout: page
 title: News
 permalink: /news/
 headerTitle: Get the latest on what we're doing
-headerSubCopy: Catch up with us, anytime and anywhere
+headerSubCopy: Catch up with us anytime, anywhere
 custom_head_owl: true
 ---
 
@@ -11,7 +11,9 @@ custom_head_owl: true
 
 
 <div class="container">
+  <p>Get the latest informaiton, here we even AJAX a remote API to get the next rocket launch to prove static sites can be dynamic!</p>
   <div class="well">
+    <!-- Show people static sites can contain live informaiton!!! -->
     {% include next-launch.html %}
   </div>
   {% for post in site.posts %}

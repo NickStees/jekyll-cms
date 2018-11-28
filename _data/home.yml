@@ -3,18 +3,18 @@ subtitle: Static speed, with dynamic content
 intro-title: Editable Static Sites
 intro-subtitle: Update via a web UI
 intro-body: >-
-  Static sites are fast to get up and running and develop on. They are also performance
-  beasts but their biggest downside is non technical users editing content. Adding the
+  Static sites are fast to get up and running and develop on. They are also **performance
+  beasts** but their biggest downside is non technical users editing content. Adding the
   Netlify CMS to your Jekyll site means clients can update this site via a Web UI. It is
   no wordpress or Drupal replacement, but gets the job done.
 intro-img: /uploads/8649856355_627bcdeadf_h.jpg
-feature-title: Feature Title
-feature-subtitle: Feature Subtitle
+feature-title: This is Editable!
+feature-subtitle: Even a complex layout like this is editable with the Netlify CMS, you won't be having client adjust the layout like [Gutenberg](https://wordpress.org/plugins/gutenberg/), but they can still keep things up to date!
 testimonial-title: We are the Best
-testimonial-subtitle: Just let us show you
+testimonial-subtitle: Even these complex icon graphics below can be updated
 hotels: '15'
 resturants: '25'
 museums: '100'
 minutes: '12'
-services-title: Service Title
-services-subtitle: Services Subtitle
+services-title: Service Offered
+services-subtitle: There is a service.yml that Netlify CMS can edit to change the below
