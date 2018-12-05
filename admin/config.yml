@@ -23,14 +23,14 @@ collections:
         file: "_data/business.yml"
         fields:
           - {label: name, name: name, widget: string}
-          - {label: address_full, name: address_full, widget: string}
-          - {label: address_street, name: address_street, widget: string}
-          - {label: address_city, name: address_city, widget: string}
-          - {label: phone_primay, name: phone_primay, widget: string}
-          - {label: phone_secondary, name: phone_secondary, widget: string}
-          - {label: fax, name: fax, widget: string}
-          - {label: email_primary, name: email_primary, widget: string}
-          - {label: google_maps_api_key, name: google_maps_api_key, widget: string}
+          - {label: address_full, name: address_full, widget: string, hint: "Example: 333 S. Franklin Street Tampa, FL 33602"}
+          - {label: address_street, name: address_street, widget: string, hint: "Example: 333 S. Franklin Street"}
+          - {label: address_city, name: address_city, widget: string, hint: "Tampa"}
+          - {label: phone_primay, name: phone_primay, widget: string, pattern: ["(\(?\+?\d{1,3}\)?[\s-]+)?\(?\d{1,3}\)?[\s-]+\d{3}[\s-]?\d{2}[\s-]?\d{2}", "Must be a phone number"], hint: "(813) 123-4567"}
+          - {label: phone_secondary, name: phone_secondary, widget: string, hint: "(813) 765-4321"}
+          - {label: fax, name: fax, widget: string, hint: "(813) 666-6666"}
+          - {label: email_primary, name: email_primary, widget: string, pattern: ["([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}", "Must be an email address"]}
+          - {label: google_maps_api_key, name: google_maps_api_key, widget: string, hint: "Used to display embeded maps"}
       - label: "Social Media"
         name: "social"
         file: "_data/social_media.yml"
@@ -60,30 +60,22 @@ collections:
         name: "home"
         file: "_data/home.yml"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Title, name: title, widget: string, hint: "The Large Text at the top"}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Intro Title, name: intro-title, widget: string}
-          - {label: Intro Subtitle, name: intro-subtitle, widget: string}
+          - {label: Intro Title, name: intro-title, widget: string, hint: "The first chunk of content"}
+          - {label: Intro Subtitle, name: intro-subtitle, widget: string, hint: "The first chunk of content"}
           - {label: Intro Body, name: intro-body, widget: markdown}
           - {label: Intro Image, name: intro-img, widget: image}
           - {label: Feature Title, name: feature-title, widget: string}
           - {label: Feature Subtitle, name: feature-subtitle, widget: string}
           - {label: Testimonial Title, name: testimonial-title, widget: string}
           - {label: Testimonial Subtitle, name: testimonial-subtitle, widget: string}
-          - {label: Hotels, name: hotels, widget: number}
-          - {label: Resturants, name: resturants, widget: number}
-          - {label: Museums, name: museums, widget: number}
-          - {label: Minutes, name: minutes, widget: number}
+          - {label: Hotels, name: hotels, widget: number, hint: "This is the animated number that counts up"}
+          - {label: Resturants, name: resturants, widget: number, hint: "This is the animated number that counts up"}
+          - {label: Museums, name: museums, widget: number, hint: "This is the animated number that counts up"}
+          - {label: Minutes, name: minutes, widget: number, hint: "This is the animated number that counts up"}
           - {label: Services Title, name: services-title, widget: string}
-          - {label: Services Subtitle, name: services-subtitle, widget: string}
-          - label: services
-            name: services
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Icon, name: icon, widget: string}
-              - {label: body, name: body, widget: string}
-
+          - {label: Services Subtitle, name: services-subtitle, widget: string, hint: "Services can be found in the Global area"}
       - label: "Documents"
         name: "documents"
         file: "_data/documents.yml"
